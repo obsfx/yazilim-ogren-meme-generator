@@ -22,7 +22,6 @@ function App() {
     'PYTHON ÖĞREN/GELİŞTİR KENDİNİ',
     'YAZILIM ÖĞRENSEN/İYİ OLUR',
     'GELECEK YAZILIMDA/ÖĞRENMEK LAZIM',
-    'JAVASCRIPT REVAÇTAYMIŞ/ÖGRENSEK GÜZEL OLUR',
     'YAZILIM TAMAM DA/ROBOTİK DE ÖNEMLİ',
     `${new Date().getFullYear() + 1}/MOBİLİN YILI OLACAK`
   ]
@@ -77,7 +76,7 @@ function App() {
       } 
     }
 
-    console.log(`${painters[curPainter]}' da yazılım öğrenmeni öğütlüyor'`);
+    console.log(`${painters[curPainter]} yazılım öğrenmeni öğütlüyor`);
     setCurPainter(prev => (prev + 1) % painters.length);
   }
 
