@@ -22,7 +22,9 @@ function App() {
     'PYTHON ÖĞREN/GELİŞTİR KENDİNİ',
     'YAZILIM ÖĞRENSEN/İYİ OLUR',
     'GELECEK YAZILIMDA/ÖĞRENMEK LAZIM',
-    'YAZILIM ÖĞRENSEYDİN/AMMMMMCIIIKKK'
+    'JAVASCRIPT REVAÇTAYMIŞ/ÖGRENSEK GÜZEL OLUR',
+    'YAZILIM TAMAM DA/ROBOTİK DE ÖNEMLİ',
+    `${new Date().getFullYear() + 1}/MOBİLİN YILI OLACAK`
   ]
 
   const getData = async () => {
@@ -75,12 +77,12 @@ function App() {
       } 
     }
 
-    console.log(curPainter);
+    console.log(`${painters[curPainter]}' da yazılım öğrenmeni öğütlüyor'`);
     setCurPainter(prev => (prev + 1) % painters.length);
   }
 
   useEffect(() => {
-    console.log('test2');
+    console.log('buraya bakma burda bişi yok --> yazılım öğren');
     random.use(Date.now().toString());
     getData();
   }, []);
