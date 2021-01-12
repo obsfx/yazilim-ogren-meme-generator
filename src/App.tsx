@@ -1,7 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
+import Url from 'url-parse';
 import random from 'random';
 import './App.css';
 
+const url: Url = new Url(window.location.href, true);
+const username: string = url.query.to && url.query.to !== '' ?
+url.query.to :
+'';
 
 function App() {
   const [ loading, setLoading ] = useState(true);
@@ -12,19 +17,7 @@ function App() {
   const painters: string[] = [ 
     'Francisco Goya',
     'Rembrandt van Rijn',
-    'Paolo Veronese',
-    'Tintoretto'
   ];
-
-  const text: string[] = [
-    'YAZILIM ÖĞRENİN',
-    'YAZILIM İŞİNDE/PARA VAR',
-    'PYTHON ÖĞREN/GELİŞTİR KENDİNİ',
-    'YAZILIM ÖĞRENSEN/İYİ OLUR',
-    'GELECEK YAZILIMDA/ÖĞRENMEK LAZIM',
-    'YAZILIM TAMAM DA/ROBOTİK DE ÖNEMLİ',
-    `${new Date().getFullYear() + 1}/MOBİLİN YILI OLACAK`
-  ]
 
   const getData = async () => {
     setLoading(true);
@@ -49,6 +42,23 @@ function App() {
       const img = new Image();
       img.src = imgurl;
 
+      const text: string[] = username === '' ? [
+        'YAZILIM ÖĞRENİN',
+        'YAZILIM İŞİNDE/PARA VAR',
+        'PYTHON ÖĞREN/GELİŞTİR KENDİNİ',
+        'YAZILIM ÖĞRENSEN/İYİ OLUR',
+        'GELECEK YAZILIMDA/ÖĞRENMEK LAZIM',
+        'YAZILIM TAMAM DA/ROBOTİK DE ÖNEMLİ',
+        `${new Date().getFullYear() + 1}/MOBİLİN YILI OLACAK`
+      ] : [
+        `${username}/YAZILIM ÖĞREN`,
+        `${username} YAZILIM İŞİNDE/PARA VAR`,
+        `${username} PYTHON ÖĞREN/GELİŞTİR KENDİNİ`,
+        `${username} YAZILIM ÖĞRENSEN/İYİ OLUR`,
+        `${username} GELECEK YAZILIMDA/ÖĞRENMEK LAZIM`,
+        `${username} YAZILIM TAMAM DA/ROBOTİK DE ÖNEMLİ`
+      ]
+
       const t = text[random.int(0, text.length - 1)];
 
       const top = t.split('/')[0].trim();
@@ -62,7 +72,7 @@ function App() {
 
         ctx.drawImage(img, 0, 0);
 
-        ctx.font = `bold ${Math.floor(width / 15)}px Helvetica`;
+        ctx.font = `bold ${Math.floor(width * 1.2 / Math.max(top.length, bottom.length))}px Helvetica`;
         ctx.shadowOffsetX = 2;
         ctx.shadowOffsetY = 2;
         ctx.shadowColor = 'rgba(0, 0, 0, 1)';
@@ -81,7 +91,7 @@ function App() {
   }
 
   useEffect(() => {
-    console.log('buraya bakma burda bişi yok --> yazılım öğren');
+    console.log('buraya bakma burda bişi yok ---> yazılım öğren -> 1');
     random.use(Date.now().toString());
     getData();
   }, []);
