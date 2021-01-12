@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/yazilim-ogren-meme-generator/static/css/main.6182c7ca.chunk.css",
+    "main.js": "/yazilim-ogren-meme-generator/static/js/main.5c0ac9f6.chunk.js",
+    "main.js.map": "/yazilim-ogren-meme-generator/static/js/main.5c0ac9f6.chunk.js.map",
+    "runtime-main.js": "/yazilim-ogren-meme-generator/static/js/runtime-main.0cf2b6da.js",
+    "runtime-main.js.map": "/yazilim-ogren-meme-generator/static/js/runtime-main.0cf2b6da.js.map",
+    "static/js/2.1bfb513d.chunk.js": "/yazilim-ogren-meme-generator/static/js/2.1bfb513d.chunk.js",
+    "static/js/2.1bfb513d.chunk.js.map": "/yazilim-ogren-meme-generator/static/js/2.1bfb513d.chunk.js.map",
+    "static/js/3.1cea862e.chunk.js": "/yazilim-ogren-meme-generator/static/js/3.1cea862e.chunk.js",
+    "static/js/3.1cea862e.chunk.js.map": "/yazilim-ogren-meme-generator/static/js/3.1cea862e.chunk.js.map",
+    "index.html": "/yazilim-ogren-meme-generator/index.html",
+    "static/css/main.6182c7ca.chunk.css.map": "/yazilim-ogren-meme-generator/static/css/main.6182c7ca.chunk.css.map",
+    "static/js/2.1bfb513d.chunk.js.LICENSE.txt": "/yazilim-ogren-meme-generator/static/js/2.1bfb513d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0cf2b6da.js",
+    "static/js/2.1bfb513d.chunk.js",
+    "static/css/main.6182c7ca.chunk.css",
+    "static/js/main.5c0ac9f6.chunk.js"
+  ]
+}
